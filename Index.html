@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anime Video Player</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f0f0f0; margin: 0; padding: 20px; text-align: center; }
+  #videoContainer { position: relative; width: 100%; max-width: 800px; margin: auto; cursor: pointer; }
+  #videoContainer img { width: 100%; border-radius: 8px; }
+  #playButton { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                font-size: 64px; color: white; text-shadow: 0 0 20px black; pointer-events: none; }
+  iframe, video { border-radius: 8px; }
+  .downloadBtn { text-decoration: none; background-color: #4285F4; color: white; padding: 10px 16px; border-radius: 6px; display: inline-block; margin-top: 15px; }
+  .downloadBtn:hover { background-color: #3367D6; }
+</style>
+</head>
+<body><h2>Anime Episode</h2><!-- Thumbnail Preview --><div id="videoContainer" onclick="loadPlayer()">
+  <img src="https://iili.io/FD5kUkg.jpg" alt="Video Thumbnail">
+  <div id="playButton">▶</div>
+</div><!-- Download Button --><a class="downloadBtn" href="https://tg-cloud-dl-x.noyes.in/file/f215b6f7-004f-4db2-9e1b-05e23c799d6e/download" target="_blank">
+  ⬇ Download Video
+</a><script>
+function loadPlayer() {
+  document.getElementById('videoContainer').innerHTML = `
+    <video width="100%" controls autoplay>
+      <source src="https://tg-cloud-dl-x.noyes.in/file/f215b6f7-004f-4db2-9e1b-05e23c799d6e/download" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  `;
+}
+</script></body>
+</html>
